@@ -22,8 +22,21 @@ framework and PyTorch.
    python -m ml_bot.train path/to/training_data.json --epochs 20
    ```
 
-5. Launch the bot using RLBot. Add `ml_bot.bot.MLBot` to your RLBot
-   configuration to run the trained model.
+5. Create `rlbot.cfg` to register your bot with RLBot:
+
+   ```ini
+   [HUMAN]
+   team = 0
+
+   [PYTHON_BOT_ML]
+   python_file = ml_bot/bot.py
+   class = MLBot
+   team = 1
+   ```
+
+   See the [RLBot configuration docs](https://github.com/RLBot/RLBot/wiki/rlbot.cfg)
+   for additional details. Launch the match using the RLBot GUI or the
+   `rlbot-run` command.
 
 ## Project Structure
 
