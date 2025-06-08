@@ -39,7 +39,7 @@ scratch.
 
    ```bash
    # Run this command from the repository root so the package resolves correctly.
-   bot-maker path/to/training_data.json --epochs 20
+   ml-bot-train path/to/training_data.json --epochs 20
    ```
 
 5. **Create `rlbot.cfg`**
