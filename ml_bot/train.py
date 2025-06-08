@@ -58,7 +58,7 @@ def train(data_path: str, epochs: int = 10, batch_size: int = 64):
 
 
 def main(argv=None):
-    """Entry point for the ``bot-maker`` command."""
+    """Entry point for the ``ml-bot-train`` script."""
     import argparse
 
     parser = argparse.ArgumentParser(description="Train Rocket League bot model")
