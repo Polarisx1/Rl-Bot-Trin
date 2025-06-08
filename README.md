@@ -16,9 +16,19 @@ framework and PyTorch.
 3. Gather training data in JSON format. Each sample should contain a
    `features` list (game state values) and an `actions` list (controller
    outputs). See `ml_bot/train.py` for details.
+   The data should look like:
+
+   ```json
+   [
+     {"features": [0.0, 1.2, ...], "actions": [0.5, -1.0, ...]},
+     ...
+   ]
+   ```
 4. Train the model:
 
    ```bash
+   # Run this command from the repository root so the ml_bot package resolves
+   # correctly.
    python -m ml_bot.train path/to/training_data.json --epochs 20
    ```
 
