@@ -6,17 +6,28 @@ framework and PyTorch.
 
 ## Getting Started
 
-1. Install Python 3.8+ and Rocket League.
-2. Install dependencies:
+The following steps walk through training and running the baseline ML bot from
+scratch.
+
+1. **Install prerequisites**
+   - Python 3.8 or newer.
+   - Rocket League (the game must be installed to run RLBot).
+
+2. **Install Python dependencies**
+
+   All required packages are listed in `requirements.txt` and include
+   `rlbot`, `numpy` and `torch`.
 
    ```bash
    pip install -r requirements.txt
    ```
 
-3. Gather training data in JSON format. Each sample should contain a
-   `features` list (game state values) and an `actions` list (controller
-   outputs). See `ml_bot/train.py` for details.
-   The data should look like:
+3. **Gather training data**
+
+   Create a JSON file containing recorded game states and the corresponding
+   controller actions. Each entry must contain a `features` list and an
+   `actions` list (see `ml_bot/train.py` for the expected shapes).  An example
+   looks like:
 
    ```json
    [
@@ -24,7 +35,7 @@ framework and PyTorch.
      ...
    ]
    ```
-4. Train the model:
+4. **Train the model**
 
    ```bash
    # Run this command from the repository root so the ml_bot package resolves
@@ -32,7 +43,8 @@ framework and PyTorch.
    python -m ml_bot.train path/to/training_data.json --epochs 20
    ```
 
-5. Create `rlbot.cfg` to register your bot with RLBot:
+5. **Create `rlbot.cfg`**
+   Register the trained bot with RLBot:
 
    ```ini
    [HUMAN]
@@ -45,8 +57,13 @@ framework and PyTorch.
    ```
 
    See the [RLBot configuration docs](https://github.com/RLBot/RLBot/wiki/rlbot.cfg)
-   for additional details. Launch the match using the RLBot GUI or the
-   `rlbot-run` command.
+   for additional details.
+
+6. **Run a match**
+
+   Launch a game using the RLBot GUI or the `rlbot-run` command line tool. The
+   bot will load the `model.pth` file produced by the training step and begin
+   playing using the neural network's outputs.
 
 ## Project Structure
 
