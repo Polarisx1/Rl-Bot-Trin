@@ -1,0 +1,11 @@
+[project]
+name = "rlbot-template"
+version = "0.1.0"
+dependencies = [
+    "rlbot>=1.35",
+    "numpy",
+    "torch",
+]
+
+[project.scripts]
+bot-maker = "bot_maker.__main__:main"
