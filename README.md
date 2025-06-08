@@ -44,3 +44,10 @@ framework and PyTorch.
 - `ml_bot/train.py` – Example training script.
 - `ml_bot/bot.py` – RLBot agent that loads the trained model.
 - `requirements.txt` – Python dependencies.
+
+## Reward System Guide
+
+See [docs/reward_guide.md](docs/reward_guide.md) for tips on crafting reward functions.
+The guide discusses competitive rewards (scoring, defending, boost usage) as well as
+freestyle considerations like aerials and combos. It also explains how to balance positive
+and negative rewards, use shaping effectively, and lists useful `GameTickPacket` metrics.
