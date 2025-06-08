@@ -3,7 +3,7 @@ from typing import Optional
 import os
 import torch
 from rlbot.agents.base_agent import BaseAgent, SimpleControllerState
-from rlbot.utils.game_state_util import GameTickPacket
+from rlbot.utils.structures.game_data_struct import GameTickPacket
 
 from .model import RocketLeagueNet
 
