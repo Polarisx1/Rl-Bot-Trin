@@ -1,13 +1,17 @@
 import subprocess
 import sys
 from pathlib import Path
+import os
 
 
 def test_bot_maker_creates_files(tmp_path):
     temp_dir = tmp_path
+    env = os.environ.copy()
+    env["PYTHONPATH"] = str(Path(__file__).resolve().parents[1])
     result = subprocess.run(
         [sys.executable, "-m", "bot_maker", "new", "temp_bot"],
         cwd=temp_dir,
+        env=env,
         capture_output=True,
         text=True,
     )

@@ -15,9 +15,10 @@ dependencies = [
     "torch",
 ]
 
+
 [project.scripts]
-bot-maker = "ml_bot.train:main"
+bot-maker = "bot_maker.__main__:main"
 
 [tool.setuptools.packages.find]
 where = ["."]
-include = ["ml_bot*"]
+include = ["ml_bot*", "bot_maker*"]
