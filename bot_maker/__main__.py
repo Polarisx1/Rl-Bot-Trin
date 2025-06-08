@@ -1,7 +1,6 @@
-from __future__ import annotations
-
 import argparse
 from pathlib import Path
+from typing import List, Optional
 
 BOT_TEMPLATE = """from rlbot.agents.base_agent import BaseAgent, SimpleControllerState
 
@@ -15,7 +14,7 @@ python_file = bot.py
 class = Bot
 """
 
-def main(argv: list[str] | None = None) -> None:
+def main(argv: Optional[List[str]] = None) -> None:
     parser = argparse.ArgumentParser(prog="bot-maker")
     subparsers = parser.add_subparsers(dest="command", required=True)
 
