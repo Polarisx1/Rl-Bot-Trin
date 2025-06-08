@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rl-bot-trin"
+version = "0.1.0"
+description = "Example RLBot ML bot using PyTorch"
+authors = [{name = "Unknown"}]
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "rlbot>=1.35",
+    "numpy",
+    "torch",
+]
+
+[project.scripts]
+bot-maker = "ml_bot.train:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["ml_bot*"]
