@@ -18,10 +18,7 @@ dependencies = [
 
 [project.scripts]
 bot-maker = "bot_maker.__main__:main"
- codex/add-pyproject.toml-with-metadata-and-scripts
 ml-bot-train = "ml_bot.train:main"
-
- main
 
 [tool.setuptools.packages.find]
 where = ["."]
