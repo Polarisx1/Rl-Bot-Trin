@@ -81,7 +81,7 @@ and negative rewards, use shaping effectively, and lists useful `GameTickPacket`
 ## Bot Maker
 
 RLBot ships with a `bot-maker` command that can scaffold a new bot project.
-See [docs/bot_maker.md](docs/bot_maker.md) for a full guide. To create a bot
+See the [Bot Maker guide](docs/bot_maker.md) for detailed usage notes. To create a bot
 named `MyBot` run:
 
 ```bash
