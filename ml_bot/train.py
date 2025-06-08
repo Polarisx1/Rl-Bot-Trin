@@ -57,11 +57,24 @@ def train(data_path: str, epochs: int = 10, batch_size: int = 64):
     print(f"Model saved to {model_path}")
 
 
-if __name__ == "__main__":
+def main(argv=None):
+    """Entry point for the ``bot-maker`` command."""
     import argparse
 
     parser = argparse.ArgumentParser(description="Train Rocket League bot model")
-    parser.add_argument("data", help="Path to JSON file containing training data")
-    parser.add_argument("--epochs", type=int, default=10, help="Number of epochs")
-    args = parser.parse_args()
+    parser.add_argument(
+        "data",
+        help="Path to JSON file containing training data",
+    )
+    parser.add_argument(
+        "--epochs",
+        type=int,
+        default=10,
+        help="Number of epochs",
+    )
+    args = parser.parse_args(argv)
     train(args.data, args.epochs)
+
+
+if __name__ == "__main__":
+    main()

@@ -13,13 +13,13 @@ scratch.
    - Python 3.8 or newer.
    - Rocket League (the game must be installed to run RLBot).
 
-2. **Install Python dependencies**
+2. **Install the package**
 
-   All required packages are listed in `requirements.txt` and include
-   `rlbot`, `numpy` and `torch`.
+   Install this project in editable mode to pull in dependencies and
+   register the ``bot-maker`` command.
 
    ```bash
-   pip install -r requirements.txt
+   pip install -e .
    ```
 
 3. **Gather training data**
@@ -38,9 +38,8 @@ scratch.
 4. **Train the model**
 
    ```bash
-   # Run this command from the repository root so the ml_bot package resolves
-   # correctly.
-   python -m ml_bot.train path/to/training_data.json --epochs 20
+   # Run this command from the repository root so the package resolves correctly.
+   bot-maker path/to/training_data.json --epochs 20
    ```
 
 5. **Create `rlbot.cfg`**
