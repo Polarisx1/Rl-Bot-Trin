@@ -77,3 +77,13 @@ See [docs/reward_guide.md](docs/reward_guide.md) for tips on crafting reward fun
 The guide discusses competitive rewards (scoring, defending, boost usage) as well as
 freestyle considerations like aerials and combos. It also explains how to balance positive
 and negative rewards, use shaping effectively, and lists useful `GameTickPacket` metrics.
+
+## Bot Maker
+
+RLBot ships with a `bot-maker` command that can scaffold a new bot project.
+See [docs/bot_maker.md](docs/bot_maker.md) for a full guide. To create a bot
+named `MyBot` run:
+
+```bash
+bot-maker new MyBot
+```
